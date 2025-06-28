@@ -7,7 +7,6 @@ import { getMoviesByListRequest } from "../../services/movies.services";
 import { MediaPosterSlider } from "../../components/MediaPosterSlider/MediaPosterSlider";
 import { Link } from "react-router-dom";
 import { FaChevronRight as ArrowIcon } from "react-icons/fa";
-import { FaRegCircleUser as UserIcon } from "react-icons/fa6";
 
 export const Movies = () => {
   const trending = useQuery({
@@ -52,18 +51,25 @@ export const Movies = () => {
 
   return (
     <main className=" bg-[#eaeaea] min-h-screen">
-      <div className=" w-[90%] max-w-[1500px] mx-auto space-y-8">
+      <div className=" w-[90%] max-w-[1500px] mx-auto space-y-12">
         <section>
           <MediaBackdropSlider results={trending.data?.results} />
         </section>
 
-        <section className=" space-y-3">
+        <section className=" space-y-5">
           <h2 className=" text-2xl font-bold">Genres</h2>
           <MediaGenresSlider genres={genres.data?.genres} />
         </section>
 
-        <section className=" space-y-3">
-          <h2 className=" text-2xl font-bold">Now Playing</h2>
+        <section className=" space-y-5">
+          <div className=" flex items-center gap-5">
+            <h2 className=" text-2xl font-bold">Now Playing</h2>
+
+            <Link to={""} className=" flex items-center gap-1">
+              <span className=" text-lg font-semibold">View All</span>
+              <ArrowIcon size={25} />
+            </Link>
+          </div>
 
           <MediaPosterSlider
             results={nowPlaying.data?.results}
@@ -71,7 +77,7 @@ export const Movies = () => {
           />
         </section>
 
-        <section className=" space-y-3">
+        <section className=" space-y-5">
           <div className=" flex items-center gap-5">
             <h2 className=" text-2xl font-bold">Popular</h2>
 
@@ -87,7 +93,7 @@ export const Movies = () => {
           />
         </section>
 
-        <section className=" space-y-3">
+        <section className=" space-y-5">
           <div className=" flex items-center gap-5">
             <h2 className=" text-2xl font-bold">Top Rated</h2>
 
@@ -103,7 +109,7 @@ export const Movies = () => {
           />
         </section>
 
-        <section className=" space-y-3">
+        <section className=" space-y-5">
           <div className=" flex items-center gap-5">
             <h2 className=" text-2xl font-bold">Upcoming</h2>
 

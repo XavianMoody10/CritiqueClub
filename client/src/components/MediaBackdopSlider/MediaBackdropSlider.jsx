@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
 import { FiInfo as InfoIcon } from "react-icons/fi";
+import { Autoplay } from "swiper/modules";
 
 export const MediaBackdropSlider = ({ results }) => {
   const slides = results?.map((s) => {
@@ -43,7 +44,15 @@ export const MediaBackdropSlider = ({ results }) => {
 
   return (
     <div className=" min-h-[700px] w-full rounded-lg border">
-      <Swiper>{slides}</Swiper>
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 8000,
+          disableOnInteraction: false,
+        }}
+      >
+        {slides}
+      </Swiper>
     </div>
   );
 };

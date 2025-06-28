@@ -3,15 +3,19 @@ import axios from "axios";
 
 const router = Router();
 
-router.get("/:media", async (req, res) => {
-  const { media } = req.params;
+router.get("/:list/:page", async (req, res) => {
+  const { list, page } = req.params;
 
-  const url = `https://api.themoviedb.org/3/genre/${media}/list`;
+  const url = `https://api.themoviedb.org/3/tv/${list}`;
 
   const options = {
     headers: {
       accept: "application/json",
       Authorization: process.env.API_KEY,
+    },
+    params: {
+      language: "en-US",
+      page: page || 1,
     },
   };
 
@@ -19,8 +23,8 @@ router.get("/:media", async (req, res) => {
     const response = await axios.get(url, options);
     res.send(response.data);
   } catch (error) {
-    console.log("genres: " + error);
-    res.status(404).send("Error getting genres");
+    console.log("Shows list: " + error);
+    res.status(404).send(`Error getting shows`);
   }
 });
 
