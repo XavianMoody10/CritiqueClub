@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer";

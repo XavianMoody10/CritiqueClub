@@ -124,6 +124,7 @@ export const handlers = [
 
   http.get("https://api.themoviedb.org/3/movie/1011477", () => {
     return HttpResponse.json(movieDetailsMockdata);
+
     // return HttpResponse.json(
     //     {
     //       status_code: 7,
