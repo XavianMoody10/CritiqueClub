@@ -4,6 +4,8 @@ import trendingMoviesMockdata from "./mockdata/trendingMovies.mockdata.js";
 import nowPlayingMovieMockdata from "./mockdata/nowPlayingMovie.mockdata.js";
 import airingTodayShowsMockdata from "./mockdata/airingTodayShows.mockdata.js";
 import trendingShowsMockdata from "./mockdata/trendingShows.mockdata.js";
+import movieDetailsMockdata from "./mockdata/movieDetails.mockdata.js";
+import showDetailsMockdata from "./mockdata/showDetails.mockdata.js";
 
 export const handlers = [
   http.get("https://api.themoviedb.org/3/genre/movie/list", () => {
@@ -116,5 +118,13 @@ export const handlers = [
       },
       { status: 404 }
     );
+  }),
+
+  http.get("https://api.themoviedb.org/3/movie/1011477", () => {
+    return HttpResponse.json(movieDetailsMockdata);
+  }),
+
+  http.get("https://api.themoviedb.org/3/tv/65701", () => {
+    return HttpResponse.json(showDetailsMockdata);
   }),
 ];

@@ -74,6 +74,7 @@ export const Movies = () => {
           <MediaPosterSlider
             results={nowPlaying.data?.results}
             error={nowPlaying.error}
+            media_type={"movie"}
           />
         </section>
 
@@ -90,6 +91,7 @@ export const Movies = () => {
           <MediaPosterSlider
             results={popular.data?.results}
             error={popular.error}
+            media_type={"movie"}
           />
         </section>
 
@@ -106,6 +108,7 @@ export const Movies = () => {
           <MediaPosterSlider
             results={topRated.data?.results}
             error={topRated.error}
+            media_type={"movie"}
           />
         </section>
 
@@ -122,6 +125,7 @@ export const Movies = () => {
           <MediaPosterSlider
             results={upcoming.data?.results}
             error={upcoming.error}
+            media_type={"movie"}
           />
         </section>
       </div>

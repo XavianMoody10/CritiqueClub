@@ -74,6 +74,7 @@ export const TVShows = () => {
           <MediaPosterSlider
             results={airingToday.data?.results}
             error={airingToday.error}
+            media_type={"tv"}
           />
         </section>
 
@@ -90,6 +91,7 @@ export const TVShows = () => {
           <MediaPosterSlider
             results={onTheAir.data?.results}
             error={onTheAir.error}
+            media_type={"tv"}
           />
         </section>
 
@@ -106,6 +108,7 @@ export const TVShows = () => {
           <MediaPosterSlider
             results={popular.data?.results}
             error={popular.error}
+            media_type={"tv"}
           />
         </section>
 
@@ -122,6 +125,7 @@ export const TVShows = () => {
           <MediaPosterSlider
             results={topRated.data?.results}
             error={topRated.error}
+            media_type={"tv"}
           />
         </section>
       </div>

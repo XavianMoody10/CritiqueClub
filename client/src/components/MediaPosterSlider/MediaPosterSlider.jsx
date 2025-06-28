@@ -5,11 +5,12 @@ import { motion } from "motion/react";
 import { FaArrowAltCircleRight as ArrowIcon } from "react-icons/fa";
 import { MdErrorOutline as ErrorIcon } from "react-icons/md";
 
-export const MediaPosterSlider = ({ results, error }) => {
+export const MediaPosterSlider = ({ results, error, media_type }) => {
   const slides = results?.map((s) => {
     const posterUrl = `https://image.tmdb.org/t/p/original/${s.poster_path}`;
     const placeholder = "https://placehold.co/600x900";
     const title = s.name || s.title || s.orginal_title;
+    const mediaType = media_type || s.media_type;
 
     return (
       <SwiperSlide>
@@ -19,7 +20,10 @@ export const MediaPosterSlider = ({ results, error }) => {
             whileHover={{ opacity: 1 }}
             className=" absolute top-0 left-0 right-0 bottom-0 bg-black/80 flex items-center justify-center"
           >
-            <Link to={""} className=" flex flex-col gap-2 items-center text-xl">
+            <Link
+              to={`/details/${mediaType}/${s.id}`}
+              className=" flex flex-col gap-2 items-center text-xl"
+            >
               <span className=" text-white font-bold">{title}</span>
 
               <ArrowIcon

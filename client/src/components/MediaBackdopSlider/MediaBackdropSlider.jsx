@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import { FiInfo as InfoIcon } from "react-icons/fi";
 import { Autoplay } from "swiper/modules";
 
-export const MediaBackdropSlider = ({ results }) => {
+export const MediaBackdropSlider = ({ results, media_type }) => {
   const slides = results?.map((s) => {
     const backdropUrl = `https://image.tmdb.org/t/p/original/${s.backdrop_path}`;
     const title = s.name || s.title || s.orginal_title;
     const overview = s.overview;
+    const mediaType = media_type || s.media_type;
 
     return (
       <SwiperSlide key={s.id}>
@@ -27,7 +28,7 @@ export const MediaBackdropSlider = ({ results }) => {
               </p>
 
               <Link
-                // to={"/movies"}
+                to={`/details/${mediaType}/${s.id}`}
                 className=" w-fit border-2 border-white bg-white py-2 px-7 text-lg font-semibold rounded-sm hover:border-red-500 hover:bg-red-500 hover:text-white duration-150"
               >
                 <div className=" flex items-center gap-2">
