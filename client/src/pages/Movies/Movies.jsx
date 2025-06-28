@@ -58,7 +58,7 @@ export const Movies = () => {
 
         <section className=" space-y-5">
           <h2 className=" text-2xl font-bold">Genres</h2>
-          <MediaGenresSlider genres={genres.data?.genres} />
+          <MediaGenresSlider genres={genres.data?.genres} mediaType={"movie"} />
         </section>
 
         <section className=" space-y-5">

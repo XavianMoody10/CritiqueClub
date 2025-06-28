@@ -6,6 +6,7 @@ import genresRoute from "./src/routes/genres.route.js";
 import trendingRoute from "./src/routes/trending.route.js";
 import moviesRoute from "./src/routes/movies.route.js";
 import showsRoute from "./src/routes/shows.route.js";
+import discoverRoute from "./src/routes/discover.route.js";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -19,6 +20,7 @@ app.use("/genres", genresRoute);
 app.use("/trending", trendingRoute);
 app.use("/movies", moviesRoute);
 app.use("/tv", showsRoute);
+app.use("/discover", discoverRoute);
 
 initiateMockServiceWorker(); // Mock Service Worker
 

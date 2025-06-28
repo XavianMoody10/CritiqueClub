@@ -10,10 +10,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Home } from "./pages/Home/Home";
 import { Movies } from "./pages/Movies/Movies";
 import { TVShows } from "./pages/TVShows/TVShows";
-import { Genres } from "./pages/Genres/Genres";
 import { Header } from "./layouts/Header/Header";
 import { MovieDetails } from "./pages/MovieDetails/MovieDetails";
 import { TVShowDetails } from "./pages/TVShowDetails/TVShowDetails";
+import { GenresCollection } from "./pages/GenresCollection/GenresCollection";
 
 // Create a client
 export const queryClient = new QueryClient();
@@ -34,9 +34,12 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/tv_shows" element={<TVShows />} />
-          <Route path="/genre/:genreId" element={<Genres />} />
-          <Route path="details/tv/:mediaId" element={<TVShowDetails />} />
-          <Route path="details/movie/:mediaId" element={<MovieDetails />} />
+          <Route
+            path="/genre/:mediaType/:genreId"
+            element={<GenresCollection />}
+          />
+          <Route path="/details/tv/:mediaId" element={<TVShowDetails />} />
+          <Route path="/details/movie/:mediaId" element={<MovieDetails />} />
         </Route>
       </Route>
     )

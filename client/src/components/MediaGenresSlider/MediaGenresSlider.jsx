@@ -5,12 +5,12 @@ import { FreeMode } from "swiper/modules";
 import { Link } from "react-router-dom";
 import GenreBackground from "../../assets/genrebg.jpg";
 
-export const MediaGenresSlider = ({ genres }) => {
+export const MediaGenresSlider = ({ genres, mediaType }) => {
   const slide = genres?.map((s) => {
     return (
       <SwiperSlide>
         <Link
-          to={`/genre/${s.id}`}
+          to={`/genre/${mediaType}/${s.id}`}
           className=" h-[120px] w-full border-2 flex items-center justify-center rounded-lg"
           style={{ backgroundImage: `url(${GenreBackground})` }}
         >
