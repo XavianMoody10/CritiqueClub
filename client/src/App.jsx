@@ -1,6 +1,7 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
 } from "react-router-dom";
@@ -10,6 +11,7 @@ import { Home } from "./pages/Home/Home";
 import { Movies } from "./pages/Movies/Movies";
 import { TVShows } from "./pages/TVShows/TVShows";
 import { Genres } from "./pages/Genres/Genres";
+import { Header } from "./layouts/Header/Header";
 
 // Create a client
 export const queryClient = new QueryClient();
@@ -19,10 +21,19 @@ const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/">
-        <Route index element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/tv_shows" element={<TVShows />} />
-        <Route path="/genre/:genreId" element={<Genres />} />
+        <Route
+          element={
+            <>
+              <Header />
+              <Outlet />
+            </>
+          }
+        >
+          <Route index element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/tv_shows" element={<TVShows />} />
+          <Route path="/genre/:genreId" element={<Genres />} />
+        </Route>
       </Route>
     )
   );
