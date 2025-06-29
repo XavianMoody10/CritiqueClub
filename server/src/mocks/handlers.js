@@ -8,10 +8,23 @@ import movieDetailsMockdata from "./mockdata/movieDetails.mockdata.js";
 import showDetailsMockdata from "./mockdata/showDetails.mockdata.js";
 import actionMoviesMockdata from "./mockdata/actionMovies.mockdata.js";
 import actionAndAdventureShowsMockdata from "./mockdata/actionAndAdventureShows.mockdata.js";
+import showsGenresMockdata from "./mockdata/showsGenres.mockdata.js";
 
 export const handlers = [
   http.get("https://api.themoviedb.org/3/genre/movie/list", () => {
     return HttpResponse.json(movieGenresMockdata);
+
+    // return HttpResponse.json(
+    //   {
+    //     status_code: 7,
+    //     status_message: "The resource you requested could not be found.",
+    //   },
+    //   { status: 404 }
+    // );
+  }),
+
+  http.get("https://api.themoviedb.org/3/genre/tv/list", () => {
+    return HttpResponse.json(showsGenresMockdata);
 
     // return HttpResponse.json(
     //   {

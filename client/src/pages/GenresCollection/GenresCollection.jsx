@@ -83,7 +83,7 @@ export const GenresCollection = () => {
     <main className=" bg-[#eaeaea] min-h-screen">
       <div className=" w-[90%] max-w-[1500px] mx-auto">
         {query.isSuccess && (
-          <div className=" min-h-[1200px] grid gap-4 min-[380px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
+          <div className=" min-h-[120vh] grid gap-4 min-[380px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
             {posters}
           </div>
         )}

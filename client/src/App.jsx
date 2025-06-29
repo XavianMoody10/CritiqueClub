@@ -4,9 +4,10 @@ import {
   Outlet,
   Route,
   RouterProvider,
+  ScrollRestoration,
+  useLocation,
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
 import { Home } from "./pages/Home/Home";
 import { Movies } from "./pages/Movies/Movies";
 import { TVShows } from "./pages/TVShows/TVShows";
@@ -19,6 +20,8 @@ import { GenresCollection } from "./pages/GenresCollection/GenresCollection";
 export const queryClient = new QueryClient();
 
 const App = () => {
+  // const location = useLocation();
+
   // All routes
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,6 +30,16 @@ const App = () => {
           element={
             <>
               <Header />
+              <ScrollRestoration
+                getKey={(location, matches) => {
+                  if (
+                    location.pathname === "/movies" ||
+                    location.pathname === "/tv_shows"
+                  ) {
+                    return location.key;
+                  }
+                }}
+              ></ScrollRestoration>
               <Outlet />
             </>
           }
