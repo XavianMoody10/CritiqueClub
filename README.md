@@ -1,6 +1,8 @@
 # CritiqueClub
 
+<p align="center">
 <img src="./client/src/assets/logo.png" alt="App Screenshot" width="600"/>
+</p>
 
 [CritiquClub.webm](https://github.com/user-attachments/assets/7b262443-87ae-4acc-801a-b8354962673f)
 
