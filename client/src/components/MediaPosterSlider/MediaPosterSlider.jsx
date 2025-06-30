@@ -18,13 +18,13 @@ export const MediaPosterSlider = ({ results, error, media_type }) => {
           <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1 }}
-            className=" absolute top-0 left-0 right-0 bottom-0 bg-black/80 flex items-center justify-center"
+            className=" absolute top-0 left-0 right-0 bottom-0 bg-black/80 flex items-center justify-center p-5"
           >
             <Link
               to={`/details/${mediaType}/${s.id}`}
               className=" flex flex-col gap-2 items-center text-xl"
             >
-              <span className=" text-white font-bold">{title}</span>
+              <span className=" text-white text-center font-bold">{title}</span>
 
               <ArrowIcon
                 color="white"

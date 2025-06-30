@@ -57,13 +57,13 @@ export const TVShows = () => {
         </section>
 
         <section className=" space-y-5">
-          <h2 className=" text-2xl font-bold">Genres</h2>
+          <h2 className=" text-2xl text-red-500 font-bold">Genres</h2>
           <MediaGenresSlider genres={genres.data?.genres} mediaType={"tv"} />
         </section>
 
         <section className=" space-y-5">
           <div className=" flex items-center gap-5">
-            <h2 className=" text-2xl font-bold">Airing Today</h2>
+            <h2 className=" text-2xl text-red-500 font-bold">Airing Today</h2>
 
             <Link to={""} className=" flex items-center gap-1">
               <span className=" text-lg font-semibold">View All</span>
@@ -80,7 +80,7 @@ export const TVShows = () => {
 
         <section className=" space-y-5">
           <div className=" flex items-center gap-5">
-            <h2 className=" text-2xl font-bold">On The Air</h2>
+            <h2 className=" text-2xl text-red-500 font-bold">On The Air</h2>
 
             <Link to={""} className=" flex items-center gap-1">
               <span className=" text-lg font-semibold">View All</span>
@@ -97,7 +97,7 @@ export const TVShows = () => {
 
         <section className=" space-y-5">
           <div className=" flex items-center gap-5">
-            <h2 className=" text-2xl font-bold">Popular</h2>
+            <h2 className=" text-2xl text-red-500 font-bold">Popular</h2>
 
             <Link to={""} className=" flex items-center gap-1">
               <span className=" text-lg font-semibold">View All</span>
@@ -114,7 +114,7 @@ export const TVShows = () => {
 
         <section className=" space-y-5">
           <div className=" flex items-center gap-5">
-            <h2 className=" text-2xl font-bold">Top Rated</h2>
+            <h2 className=" text-2xl text-red-500 font-bold">Top Rated</h2>
 
             <Link to={""} className=" flex items-center gap-1">
               <span className=" text-lg font-semibold">View All</span>

@@ -8,6 +8,8 @@ async function initiateMockServiceWorker() {
     server.listen();
 
     console.log("Mock Service Worker has started");
+  } else {
+    return;
   }
 }
 

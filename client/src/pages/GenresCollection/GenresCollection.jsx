@@ -27,7 +27,7 @@ export const GenresCollection = () => {
     retry: false,
     staleTime: 300000,
     getNextPageParam: (lastPage, pages) => {
-      if (lastPage.page + 1 === 3) {
+      if (lastPage.page + 1 === lastPage.total_pages) {
         return undefined;
       }
 
@@ -47,7 +47,7 @@ export const GenresCollection = () => {
     return page?.results.map((s) => {
       const posterUrl = `https://image.tmdb.org/t/p/original/${s.poster_path}`;
       const placeholder = "https://placehold.co/600x900";
-      const title = s.name || s.title || s.orginal_title;
+      const title = s.name || s.title || s.original_title;
 
       return (
         <div className=" relative" key={s.id}>
