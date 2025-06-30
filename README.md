@@ -1,6 +1,6 @@
 # CritiqueClub
 
-![App Screenshot](path/to/your/screenshot.png)
+![App Screenshot](./client/src/assets/logo.png)
 
 [CritiquClub.webm](https://github.com/user-attachments/assets/7b262443-87ae-4acc-801a-b8354962673f)
 
