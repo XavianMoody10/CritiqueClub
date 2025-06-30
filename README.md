@@ -10,15 +10,6 @@ My Awesome Project is a [brief description here] web application that allows use
 
 > ⚠️ **Note:** This project is still in active development. More features and improvements will be added in the future.
 
-## 🛠️ Technologies Used
-
-- React
-- Node.js
-- Express
-- MongoDB
-- Tailwind CSS
-- Vite
-
 ## 📦 Libraries Used & Their Purpose
 
 ### 🧩 Frontend Libraries
