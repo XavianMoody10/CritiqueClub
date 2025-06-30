@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function getTrendingMediaRequest(media) {
-  const url = `http://localhost:3001/trending/${media}`;
+  const url = `${import.meta.env.VITE_BACKEND_SERVER}/trending/${media}`;
 
   try {
     if (!media) {

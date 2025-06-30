@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function getMediaReviewsRequest(mediaId) {
-  const url = `http://localhost:3001/reviews/${mediaId}`;
+  const url = `${import.meta.env.VITE_BACKEND_SERVER}/reviews/${mediaId}`;
 
   try {
     if (!mediaId) {
@@ -22,7 +22,7 @@ async function getMediaReviewsRequest(mediaId) {
 async function postMediaReviewsRequest(formData) {
   const { mediaId, review, rating } = formData;
 
-  const url = `http://localhost:3001/reviews`;
+  const url = `${import.meta.env.VITE_BACKEND_URL}/reviews`;
 
   try {
     if (!mediaId) {

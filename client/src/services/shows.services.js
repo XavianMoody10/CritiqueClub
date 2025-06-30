@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function getShowsByListRequest(list, page) {
-  const url = `http://localhost:3001/tv/list/${list}/${page}`;
+  const url = `${import.meta.env.VITE_BACKEND_SERVER}/tv/list/${list}/${page}`;
 
   try {
     if (!list) {
@@ -20,7 +20,7 @@ async function getShowsByListRequest(list, page) {
 }
 
 async function getShowDetailsRequest(id) {
-  const url = `http://localhost:3001/tv/details/${id}`;
+  const url = `${import.meta.env.VITE_BACKEND_URL}/tv/details/${id}`;
 
   try {
     if (!id) {

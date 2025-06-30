@@ -1,7 +1,9 @@
 import axios from "axios";
 
 async function getMoviesCollectionByGenreRequest(mediaType, genreId, page) {
-  const url = `http://localhost:3001/discover/${mediaType}/${genreId}/${page}`;
+  const url = `${
+    import.meta.env.VITE_BACKEND_SERVER
+  }/discover/${mediaType}/${genreId}/${page}`;
 
   try {
     const response = await axios.get(url);

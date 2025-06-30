@@ -1,7 +1,9 @@
 import axios from "axios";
 
 async function getMoviesByListRequest(list, page) {
-  const url = `http://localhost:3001/movies/list/${list}/${page}`;
+  const url = `${
+    import.meta.env.VITE_BACKEND_SERVER
+  }/movies/list/${list}/${page}`;
 
   try {
     if (!list) {
@@ -20,7 +22,7 @@ async function getMoviesByListRequest(list, page) {
 }
 
 async function getMovieDetailsRequest(id) {
-  const url = `http://localhost:3001/movies/details/${id}`;
+  const url = `${import.meta.env.VITE_BACKEND_URL}/movies/details/${id}`;
 
   try {
     if (!id) {
