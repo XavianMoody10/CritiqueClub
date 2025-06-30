@@ -1,12 +1,12 @@
 # CritiqueClub
 
-![App Screenshot](./client/src/assets/logo.png)
+<img src="./client/src/assets/logo.png" alt="App Screenshot" width="600"/>
 
 [CritiquClub.webm](https://github.com/user-attachments/assets/7b262443-87ae-4acc-801a-b8354962673f)
 
 ## 📖 Description
 
-My Awesome Project is a [brief description here] web application that allows users to [what it does, main features, and purpose]. It was built with modern web technologies focusing on performance, responsiveness, and user experience.
+A full-stack MERN application that allows users to rate and leave reviews for movies and TV shows.
 
 > ⚠️ **Note:** This project is still in active development. More features and improvements will be added in the future.
 
